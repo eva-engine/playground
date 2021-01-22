@@ -1,0 +1,13 @@
+.css {
+    color: #ff0000
+}
+
+.outter {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.button-box {
+    display: block;
+}

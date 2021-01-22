@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            color: white
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outter">
+        <div class="ranges">
+            Anchor X <input id="anchorX" data-prop="anchor" data-key="x" type="range" max="2" min="-1" step="0.01"
+                value="0">
+            <br>
+            Anchor Y <input id="anchorY" data-prop="anchor" data-key="y" type="range" max="2" min="-1" step="0.01"
+                value="0">
+            <br>
+            Position X <input id="positionX" data-prop="position" data-key="x" type="range" max="750" min="-750"
+                step="5" value="0">
+            <br>
+            Position Y <input id="positionY" data-prop="position" data-key="y" type="range" max="750" min="-750"
+                step="5" value="0">
+            <br>
+            Origin X <input id="originX" data-prop="origin" data-key="x" type="range" max="2" min="-1" step="0.01"
+                value="0">
+            <br>
+            Origin Y <input id="originY" data-prop="origin" data-key="y" type="range" max="2" min="-1" step="0.01"
+                value="0">
+            <br>
+        </div>
+        <div class="value"></div>
+        <div class="button-box">
+            <button onclick="setPos('center')">居中</button>
+            <button onclick="setPos('lefttop')">左上角</button>
+            <button onclick="setPos('righttop')">右上角</button>
+            <button onclick="setPos('leftbottom')">左下角</button>
+            <button onclick="setPos('rightbottom')">右下角</button>
+        </div>
+    </div>
+    <script>
+        const position = { x: 0, y: 0 }
+        const origin = { x: 0, y: 0 }
+        const anchor = { x: 0, y: 0 }
+        const prop = { origin, anchor, position }
+        const ranges = document.querySelector('.ranges')
+        const valueDom = document.querySelector('.value')
+
+        valueDom.innerHTML = getValue()
+        ranges.querySelectorAll('input').forEach(input => {
+            input.addEventListener('input', () => {
+                setTransform(input)
+                valueDom.innerHTML = getValue()
+            })
+        })
+
+        function getValue() {
+            return `
+                    Position: ${JSON.stringify(position)}<br/>
+                    白色 Anchor: ${JSON.stringify(anchor)}<br/>
+                    青色 Origin: ${JSON.stringify(origin)}
+                `
+        }
+        function setTransform(input) {
+
+            prop[input.dataset.prop][input.dataset.key] = parseFloat(input.value)
+            image2.transform.origin = origin
+            image2.transform.anchor = anchor
+            image2.transform.position = position
+
+            anchorPoint.transform.anchor = anchor
+            originPoint.transform.anchor = origin
+        }
+        function drawPoints() {
+            anchorPoint = new GameObject('anchorPoint', {
+                size: {
+                    width: 10,
+                    height: 10,
+                },
+                origin: {
+                    x: 0.5,
+                    y: 0.5
+                }
+            })
+            const anchorGraph = anchorPoint.addComponent(new Graphics)
+
+            anchorGraph.graphics.beginFill(0xffffff, 1)
+            anchorGraph.graphics.drawRect(0, 0, 10, 10)
+            anchorGraph.graphics.endFill()
+            image.addChild(anchorPoint)
+
+
+
+
+            originPoint = new GameObject('originPoint', {
+                size: {
+                    width: 5,
+                    height: 5,
+                },
+                origin: {
+                    x: 0.5,
+                    y: 0.5
+                }
+            })
+
+
+            const originGraph = originPoint.addComponent(new Graphics)
+
+            originGraph.graphics.beginFill(0x00ffff, 1)
+            originGraph.graphics.drawRect(0, 0, 5, 5)
+            originGraph.graphics.endFill()
+            image2.addChild(originPoint)
+
+
+            image.addComponent(new Render({
+                sortableChildren: true
+            }))
+            anchorPoint.addComponent(new Render({
+                zIndex: 0
+            }))
+            image2.addComponent(new Render({
+                zIndex: 1,
+                alpha: 0.8,
+            }))
+        }
+
+
+        const positions = {
+            center: {
+                position: { x: 0, y: 0 },
+                origin: { x: 0.5, y: 0.5 },
+                anchor: { x: 0.5, y: 0.5 },
+            },
+            lefttop: {
+                position: { x: 0, y: 0 },
+                origin: { x: 0, y: 0 },
+                anchor: { x: 0, y: 0 },
+            },
+            leftbottom: {
+                position: { x: 0, y: 0 },
+                origin: { x: 0, y: 1 },
+                anchor: { x: 0, y: 1 },
+            },
+            righttop: {
+                position: { x: 0, y: 0 },
+                origin: { x: 1, y: 0 },
+                anchor: { x: 1, y: 0 },
+            },
+            rightbottom: {
+                position: { x: 0, y: 0 },
+                origin: { x: 1, y: 1 },
+                anchor: { x: 1, y: 1 },
+            },
+        }
+        function setPos(key) {
+            const pos = positions[key]
+            Object.keys(pos).forEach((key) => {
+                document.querySelector(`#${key}X`).value = pos[key].x || 0
+                document.querySelector(`#${key}Y`).value = pos[key].y || 0
+            })
+
+            ranges.querySelectorAll('input').forEach(input => {
+                setTransform(input)
+            })
+        }
+
+    </script>
+    <canvas width="750" height="1000" id="canvas" style="width: 100%"></canvas>
+</body>
+
+</html>

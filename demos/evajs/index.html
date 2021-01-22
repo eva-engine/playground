@@ -1,0 +1,32 @@
+<canvas id="canvas"></canvas>
+<script>
+  const canvasEl = document.getElementById('canvas');
+
+  function setCanvasStyle(style) {
+    for (const key in style) {
+      canvasEl.style[key] = style[key];
+    }
+  }
+
+  window.onload = function() {
+    const { width, height } = canvasEl;
+    const { innerWidth, innerHeight } = window;
+
+    if (width < innerWidth && height < innerHeight) {
+      setCanvasStyle({
+        width: `${width}px`,
+        height: `${height}px`,
+      });
+    } else if (width / height > innerWidth / innerHeight) {
+      setCanvasStyle({
+        width: `${innerWidth}px`,
+        height: `${(innerWidth / width) * height}px`,
+      });
+    } else {
+      setCanvasStyle({
+        width: `${(innerHeight / height) * width}px`,
+        height: `${innerHeight}px`,
+      });
+    }
+  };
+</script>

@@ -1,0 +1,24 @@
+{
+  "name": "@ali/eva-playground",
+  "version": "0.4.0",
+  "description": "EVA Playground",
+  "author": "zhuxun.jb <zhuxun.jb@alibaba-inc.com>",
+  "dependencies": {
+    "@demosify/core": "file:lib/demosify"
+  },
+  "devDependencies": {
+    "cheerio": "^1.0.0-rc.3"
+  },
+  "scripts": {
+    "postinstall": "npm i ./lib/demosify",
+    "dev": "demosify --public-url \"/\" --serve",
+    "prebuild": "rm -rf ./public",
+    "build": "demosify --public-url \"./\" --prod",
+    "postbuild": "node ./script/aplus.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.alibaba-inc.com:eva/eva-playground.git"
+  },
+  "__npminstall_done": false
+}

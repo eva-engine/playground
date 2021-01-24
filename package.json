@@ -1,8 +1,8 @@
 {
   "name": "@ali/eva-playground",
-  "version": "0.4.0",
+  "version": "1.0.0",
   "description": "EVA Playground",
-  "author": "zhuxun.jb <zhuxun.jb@alibaba-inc.com>",
+  "author": "fanmingfei <az8641683@163.com>",
   "dependencies": {
     "@demosify/core": "file:lib/demosify"
   },
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@gitlab.alibaba-inc.com:eva/eva-playground.git"
+    "url": "git@github.com:eva-engine/playground.git"
   },
   "__npminstall_done": false
 }

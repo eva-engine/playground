@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const cheerio = require('cheerio');
 
-const publicDir = path.join(__dirname, '..', 'public');
+const publicDir = path.join(__dirname, '..', 'docs');
 
 let htmlContent = fs.readFileSync(path.resolve(publicDir, 'index.html'));
 const $ = cheerio.load(htmlContent);

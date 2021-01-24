@@ -34,6 +34,7 @@ const game = new Game({
 });
 
 const cut = new GameObject('cut', {
+  position: {x: 240,y: 400},
   size: { width: 300, height: 200 },
   origin: { x: 0, y: 0 },
 });

@@ -31,8 +31,8 @@ module.exports = {
   globalPackages: {
     // 配置需要加载的 JS、CSS 库
     js: [
-      '//unpkg.alibaba-inc.com/eventemitter3@3.1.2/index.js',
-      '//unpkg.alibaba-inc.com/stats.js@0.17.0/build/stats.min.js',
+      'https://cdn.bootcdn.net/ajax/libs/eventemitter3/3.1.2/index.min.js',
+      'https://cdn.bootcdn.net/ajax/libs/stats.js/r17/Stats.min.js',
       'https://cdn.bootcdn.net/ajax/libs/lodash.js/4.17.15/lodash.min.js',
       'https://cdn.bootcdn.net/ajax/libs/pixi.js/4.8.7/pixi.min.js',
       './showStats.js',

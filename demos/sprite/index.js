@@ -14,8 +14,7 @@ resource.addResource([
       },
       json: {
         type: 'json',
-        url:
-          'https://pages.tmall.com/wow/eva/ad317f6aea149d9a8b34a517e5df2caf.json',
+        url: './json/ad317f6aea149d9a8b34a517e5df2caf.json',
       },
     },
     preload: true,

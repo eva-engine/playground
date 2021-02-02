@@ -14,11 +14,11 @@ resource.addResource([
       },
       ske: {
         type: 'json',
-        url: 'https://pages.tmall.com/wow/eva/08a16034db954b2dc2c7f7cff38d5b4c.json',
+        url: './json/08a16034db954b2dc2c7f7cff38d5b4c.json',
       },
       atlas: {
         type: 'atlas',
-        url: 'https://pages.tmall.com/wow/eva/41799e38f99969d2d6f39c4fa75f8861.atlas',
+        url: './json/41799e38f99969d2d6f39c4fa75f8861.atlas',
       },
     },
   },

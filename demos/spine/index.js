@@ -10,14 +10,12 @@ resource.addResource([
     src: {
       ske: {
         type: 'json',
-        url:
-          'https://pages.tmall.com/wow/eva/b5fdf74313d5ff2609ab82f6b6fd83e6.json',
+        url: './json/b5fdf74313d5ff2609ab82f6b6fd83e6.json',
       },
       // @ts-ignore
       atlas: {
         type: 'atlas',
-        url:
-          'https://pages.tmall.com/wow/eva/b8597f298a5d6fe47095d43ef03210d4.atlas',
+        url: './json/b8597f298a5d6fe47095d43ef03210d4.atlas',
       },
       image: {
         type: 'png',
@@ -49,8 +47,8 @@ game.scene.transform.size = {
 
 const gameObject = new GameObject('spine', {
   anchor: {
-    x:0.5,
-    y:0.5,
+    x: 0.5,
+    y: 0.5,
   },
   scale: {
     x: 0.5,

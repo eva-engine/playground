@@ -1,5 +1,5 @@
 var pkg = require('./package.json');
-const pre = 'https://g.alicdn.com/eva/jscdn/1.0.0-alpha.7/'
+const pre = 'https://g.alicdn.com/eva/jscdn/1.0.0-alpha.10/'
 const min = 'min.'
 // const pre = 'http://127.0.0.1:8080/packages/evajs-cdn/cdn/'
 // const min = ''

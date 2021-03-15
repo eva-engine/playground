@@ -1,5 +1,5 @@
 var pkg = require('./package.json');
-const pre = 'https://g.alicdn.com/eva/jscdn/1.0.0-alpha.10/'
+const pre = 'https://g.alicdn.com/eva/jscdn/1.0.1-alpha.3/'
 const min = 'min.'
 // const pre = 'http://127.0.0.1:8080/packages/evajs-cdn/cdn/'
 // const min = ''
@@ -51,6 +51,7 @@ module.exports = {
       `${pre}EVA.plugin.renderer.graphics.${min}js`,
       `${pre}EVA.plugin.renderer.event.${min}js`,
       `${pre}EVA.plugin.renderer.mask.${min}js`,
+      `${pre}EVA.plugin.renderer.lottie.${min}js`,
       `${pre}EVA.plugin.transition.${min}js`,
     ],
     css: [],

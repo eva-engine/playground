@@ -87,9 +87,9 @@ resource.on(LOAD_EVENT.START, e => {
 }); // 开始loader
 resource.on(LOAD_EVENT.PROGRESS, e => {
   console.log('progress', e);
-  document.querySelector('.loaded').style.width = e.progress + '%';
-  document.querySelector('.text').innerHTML = parseInt(e.progress) + '%';
-  document.querySelector('.point').style.left = `calc(${e.progress}% - 10vw)`;
+  document.querySelector('.loaded').style.width = e.progress * 100 + '%';
+  document.querySelector('.text').innerHTML = parseInt(e.progress * 100) + '%';
+  document.querySelector('.point').style.left = `calc(${e.progress*100}% - 10vw)`;
 }); // 加载进度更新
 resource.on(LOAD_EVENT.LOADED, e => {
   console.log('LOADED', e);

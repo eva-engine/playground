@@ -81,7 +81,7 @@ resource.addResource([
   },
 ]);
 
-EVA.resource.preload();
+resource.preload();
 resource.on(LOAD_EVENT.START, e => {
   console.log('start', e);
 }); // 开始loader

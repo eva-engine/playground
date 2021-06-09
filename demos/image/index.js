@@ -16,36 +16,34 @@ resource.addResource([
   },
 ]);
 
-{
-  const game = new Game({
-    systems: [
-      new RendererSystem({
-        canvas: document.querySelector('#canvas'),
-        width: 750,
-        height: 1000,
-      }),
-      new ImgSystem(),
-    ],
-  });
-
-  const image = new GameObject('image', {
-    size: { width: 750, height: 1319 },
-    origin: { x: 0, y: 0 },
-    position: {
-      x: 0,
-      y: -319,
-    },
-    anchor: {
-      x: 0,
-      y: 0,
-    },
-  });
-
-  image.addComponent(
-    new Img({
-      resource: 'imageName',
+const game = new Game({
+  systems: [
+    new RendererSystem({
+      canvas: document.querySelector('#canvas'),
+      width: 750,
+      height: 1000,
     }),
-  );
+    new ImgSystem(),
+  ],
+});
 
-  game.scene.addChild(image);
-}
+const image = new GameObject('image', {
+  size: { width: 750, height: 1319 },
+  origin: { x: 0, y: 0 },
+  position: {
+    x: 0,
+    y: -319,
+  },
+  anchor: {
+    x: 0,
+    y: 0,
+  },
+});
+
+image.addComponent(
+  new Img({
+    resource: 'imageName',
+  }),
+);
+
+game.scene.addChild(image);

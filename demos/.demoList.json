@@ -82,6 +82,10 @@
     "src": "anchor"
   },
   {
+    "label": "物理 Matterjs - Physics Matterjs",
+    "src": "matterjs"
+  },
+  {
     "label": "EVA Store - 素材eva.js代码预览",
     "src": "evajs",
     "visible": false

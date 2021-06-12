@@ -112,8 +112,8 @@ function createPlayer() {
           x: 0,
           y: 0,
         },
-        stopRotation: true,
       },
+      stopRotation: true,
     }),
   );
   game.scene.addChild(image);
@@ -144,8 +144,8 @@ function createWall(x, y, width, height) {
           x: 0,
           y: 0,
         },
-        stopRotation: true, // default false, usually do not need to be set
       },
+      stopRotation: true, // default false, usually do not need to be set
     }),
   );
   game.scene.addChild(go);

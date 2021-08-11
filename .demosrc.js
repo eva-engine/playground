@@ -1,6 +1,6 @@
 var pkg = require('./package.json');
 const pre = 'https://unpkg.com/'
-const version = '1.0.7'
+const version = '1.1.x'
 // const min = 'min.'
 // const pre = 'http://127.0.0.1:8080/packages/evajs-cdn/cdn/'
 const min = ''
@@ -44,6 +44,7 @@ module.exports = {
       `${pre}@eva/plugin-renderer-text@${version}/dist/EVA.plugin.renderer.text.${min}js`,
       `${pre}@eva/plugin-renderer-dragonbone@${version}/dist/EVA.plugin.renderer.dragonbone.${min}js`,
       `${pre}@eva/plugin-renderer-spine@${version}/dist/EVA.plugin.renderer.spine.${min}js`,
+      `${pre}@eva/plugin-renderer-spine38@${version}/dist/EVA.plugin.renderer.spine38.${min}js`,
       `${pre}@eva/plugin-renderer-sprite@${version}/dist/EVA.plugin.renderer.sprite.${min}js`,
       `${pre}@eva/plugin-renderer-sprite-animation@${version}/dist/EVA.plugin.renderer.spriteAnimation.${min}js`,
       `${pre}@eva/plugin-renderer-tiling-sprite@${version}/dist/EVA.plugin.renderer.tilingSprite.${min}js`,

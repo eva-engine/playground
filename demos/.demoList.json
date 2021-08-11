@@ -36,8 +36,16 @@
     "src": "spine"
   },
   {
+    "label": "骨骼动画-Spine3.8",
+    "src": "spine38"
+  },
+  {
     "label": "骨骼动画-Spine2",
     "src": "spine2"
+  },
+  {
+    "label": "Lottie",
+    "src": "lottie"
   },
   {
     "label": "过渡动画-Transition",

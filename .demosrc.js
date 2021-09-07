@@ -1,6 +1,6 @@
 var pkg = require('./package.json');
 const pre = 'https://unpkg.com/'
-const version = '1.1.x'
+const version = '1.1.7'
 // const min = 'min.'
 // const pre = 'http://127.0.0.1:8080/packages/evajs-cdn/cdn/'
 const min = ''

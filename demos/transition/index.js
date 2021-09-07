@@ -8,8 +8,10 @@ resource.addResource([
     name: 'heart',
     type: RESOURCE_TYPE.IMAGE,
     src: {
-      image:
-        '//gw.alicdn.com/bao/uploaded/TB1lVHuaET1gK0jSZFhXXaAtVXa-200-200.png',
+      image: {
+        type: 'png',
+        url: '//gw.alicdn.com/bao/uploaded/TB1lVHuaET1gK0jSZFhXXaAtVXa-200-200.png',
+      }
     },
     preload: false,
   },

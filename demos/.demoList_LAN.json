@@ -1,0 +1,110 @@
+[
+  {
+    "label": "资源管理-Resource",
+    "src": "resource"
+  },
+  {
+    "label": "图片-Image",
+    "src": "image"
+  },
+  {
+    "label": "文字-Text",
+    "src": "text"
+  },
+  {
+    "label": "精灵-Sprite",
+    "src": "sprite"
+  },
+  {
+    "label": "平铺精灵-TilingSprite",
+    "src": "tilingSprite"
+  },
+  {
+    "label": "事件-Event",
+    "src": "event"
+  },
+  {
+    "label": "逐帧动画-SpriteAnimation",
+    "src": "spriteAnimation"
+  },
+  {
+    "label": "骨骼动画-DragonBone",
+    "src": "dragonBone"
+  },
+  {
+    "label": "骨骼动画-Spine",
+    "src": "spine"
+  },
+  {
+    "label": "骨骼动画-Spine3.8",
+    "src": "spine38"
+  },
+  {
+    "label": "骨骼动画-Spine2",
+    "src": "spine2"
+  },
+  {
+    "label": "Lottie",
+    "src": "lottie"
+  },
+  {
+    "label": "过渡动画-Transition",
+    "src": "transition"
+  },
+  {
+    "label": "过渡动画2-Transition2",
+    "src": "transition2"
+  },
+  {
+    "group": "渲染-Render",
+    "src": "render",
+    "demos": [
+      {
+        "label": "透明度-Alpha",
+        "src": "alpha"
+      },
+      {
+        "label": "排序-Sort",
+        "src": "sort"
+      }
+    ]
+  },
+  {
+    "label": "图形-Graphics",
+    "src": "graphics"
+  },
+  {
+    "label": "遮罩-Mask",
+    "src": "mask"
+  },
+  {
+    "label": "九宫格-NinePatch",
+    "src": "ninePatch"
+  },
+  {
+    "label": "组件-Component",
+    "src": "component"
+  },
+  {
+    "label": "anchor",
+    "src": "anchor"
+  },
+  {
+    "label": "物理 Matterjs - Physics Matterjs",
+    "src": "matterjs"
+  },
+  {
+    "label": "Mars",
+    "src": "mars"
+  },
+  {
+    "label": "EVA Store - 素材eva.js代码预览",
+    "src": "evajs",
+    "visible": false
+  },
+  {
+    "label": "EVA Store - 素材css代码预览",
+    "src": "css",
+    "visible": false
+  }
+]

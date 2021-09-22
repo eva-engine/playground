@@ -15,6 +15,8 @@ export default function transform(code) {
         name = a+b[0].toUpperCase()+b.substring(1)
       }
       return `} = EVA.plugin.${name}`;
+    } else if (match.indexOf('@ali/eva-plugin-renderer-mars')) {
+      return `} = EVA.plugin.renderer.mars`
     }
   });
   console.log(code,123)

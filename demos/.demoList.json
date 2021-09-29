@@ -94,6 +94,10 @@
     "src": "matterjs"
   },
   {
+    "label": "Mars",
+    "src": "mars"
+  },
+  {
     "label": "EVA Store - 素材eva.js代码预览",
     "src": "evajs",
     "visible": false

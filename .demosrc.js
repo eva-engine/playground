@@ -1,6 +1,3 @@
-const args = require('minimist')(process.argv.slice(2));
-// 内外网版本
-const isLAN = args.isLAN
 var pkg = require('./package.json');
 const pre = 'https://unpkg.com/'
 const version = '1.1.7'
@@ -19,7 +16,7 @@ module.exports = {
     },
   },
   staticFolder: 'static',
-  demoList: isLAN ? '.demoList_LAN.json' : '.demoList.json', // demoList配置文件的文件名，默认为.demoList.json
+  demoList: '.demoList.json', // demoList配置文件的文件名，默认为.demoList.json
   name: 'EVA Playground', // 配置Playground的标题
   version: `v${pkg.version}`,
   homePage: 'https://eva.js.org/playground', // 配置Playground链接跳转的主页
@@ -60,9 +57,7 @@ module.exports = {
       `${pre}@eva/plugin-renderer-lottie@${version}/dist/EVA.plugin.renderer.lottie.${min}js`,
       `${pre}@eva/plugin-transition@${version}/dist/EVA.plugin.transition.${min}js`,
       `${pre}@eva/plugin-matterjs@${version}/dist/EVA.plugin.renderer.matterjs.${min}js`,
-      ...(() => isLAN ? [
-        `https://dev.g.alicdn.com/eva/eva-plugin-renderer-mars/1.0.1/plugin.global.js`
-      ] : [])()
+      `https://dev.g.alicdn.com/eva/eva-plugin-renderer-mars/1.0.1/plugin.global.js`
     ],
     css: [],
   },

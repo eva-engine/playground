@@ -38,7 +38,7 @@ class Move extends Component {
       y: 0,
     };
   }
-  onPlay() {
+  onResume() {
     this.speed = this.oldSpeed;
   }
 }
@@ -96,6 +96,6 @@ document.addEventListener('visibilitychange', () => {
   if (document.hidden) {
     game.pause();
   } else {
-    game.start();
+    game.resume();
   }
 });
